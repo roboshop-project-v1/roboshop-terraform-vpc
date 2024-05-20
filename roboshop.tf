@@ -7,3 +7,8 @@ module "roboshop" {
     cidr = each.value["cidr"]
 
 }
+
+output "name" {
+    value = var.vpc_details
+  
+}
