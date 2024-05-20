@@ -9,6 +9,6 @@ module "roboshop" {
 }
 
 output "name" {
-    value = var.vpc_details
+    value = module.roboshop
   
 }
