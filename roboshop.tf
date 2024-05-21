@@ -9,7 +9,7 @@ module "roboshop" {
 
 }
 
-output "name3" {
+output "name2" {
     value = module.roboshop
   
 }
