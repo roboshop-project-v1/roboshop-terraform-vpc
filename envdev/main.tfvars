@@ -21,3 +21,29 @@ vpc = {
 default_vpc_id = "vpc-0d3da8d120733d9e0"
 default_vpc_cidr = "172.31.0.0/16"
 default_vpc_rt = "rtb-0a819725561398b7a"
+
+tags = {
+    company_name = "ABC Tech"
+    bussiness_unit = "Ecommerce"
+    project_name = "Roboshop"
+    cost_center = "ecom_rs"
+    }
+env = "dev"
+
+alb = {
+    public = {
+        internal = false
+        lb_type = "application"
+        sg_ingress_cidr = ["0.0.0.0/0"]
+        sg_port = 80
+    }
+
+    private = {
+        internal = true
+        lb_type = "application"
+        sg_ingress_cidr = ["172.31.0.0/16"]
+        sg_port = 80
+    }
+}
+
+
