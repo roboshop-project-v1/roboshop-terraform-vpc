@@ -30,8 +30,3 @@ module "vpc" {
 
 # }
 
-
-output "name2" {
-    value = module.vpc
-  
-}
