@@ -32,6 +32,6 @@ module "alb" {
 
 
 output "name2" {
-    value = module.roboshop
+    value = module.vpc
   
 }
