@@ -1,4 +1,4 @@
-output "vpc" {
+output "subnets_root" {
   value = data.aws_subnets.subnets
 }
 
