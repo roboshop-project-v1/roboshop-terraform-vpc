@@ -48,5 +48,14 @@ alb = {
 
 
 docdb = {
-    main = {}
+    main = {
+
+        backup_retention_period = 5
+        preferred_backup_window = "07:00-09:00"
+        skip_final_snapshot = true
+        engine_version = "4.0.0"
+        family = "docdb4.0"
+        instance_count   = 2
+        instance_class     = "db.t3.medium"
+    }
 }
