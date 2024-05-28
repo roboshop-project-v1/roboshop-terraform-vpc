@@ -76,3 +76,16 @@ rds = {
     }
 
 }
+
+elasticache = {
+    main = {
+
+        elasticache_type = "redis"
+        family =    "redis6.x"
+        node_type            = "cache.t3.micro"
+        num_cache_nodes      = 1
+        parameter_group_name = "default.redis3.2"
+        engine_version       = "6.2"
+        port                 = 6379
+    }
+}
