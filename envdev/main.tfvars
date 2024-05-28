@@ -47,3 +47,6 @@ alb = {
 }
 
 
+docdb = {
+    main = {}
+}

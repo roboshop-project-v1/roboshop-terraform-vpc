@@ -5,3 +5,4 @@ variable "default_vpc_rt" {}
 variable "tags" {}
 variable "env" {}
 variable "alb" {}
+variable "docdb" {}
