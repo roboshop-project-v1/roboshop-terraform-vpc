@@ -7,4 +7,7 @@ variable "env" {}
 variable "alb" {}
 variable "docdb" {}
 variable "rds" {}
+variable "zone_id" {}
 variable "rabbitmq" {}
+variable "apps" {}
+variable "ssh_ingress_cidr" {}

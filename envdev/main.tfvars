@@ -21,7 +21,9 @@ vpc = {
 default_vpc_id = "vpc-0d3da8d120733d9e0"
 default_vpc_cidr = "172.31.0.0/16"
 default_vpc_rt = "rtb-0a819725561398b7a"
+zone_id = "Z05459522TM73CF1WNKI7"
 
+ssh_ingress_cidr = ["172.31.0.0/16"]
 tags = {
     company_name = "ABC Tech"
     bussiness_unit = "Ecommerce"
@@ -95,6 +97,57 @@ rabbitmq = {
         instance_type = "t3.small"
         ssh_ingress_cidr = ["172.31.0.0/16"]
         zone_id = "Z05459522TM73CF1WNKI7"
+
+    }
+}
+
+apps = {
+    frontend = {
+        instance_type = "t3.micro"
+        port = 80
+        desired_capacity   = 1
+        max_size           = 3
+        min_size           = 1
+
+    }
+    catalogue = {
+        instance_type = "t3.micro"
+        port = 80
+        desired_capacity   = 1
+        max_size           = 3
+        min_size           = 1
+
+    }
+    cart = {
+        instance_type = "t3.micro"
+        port = 80
+        desired_capacity   = 1
+        max_size           = 3
+        min_size           = 1
+
+    }
+    user = {
+        instance_type = "t3.micro"
+        port = 80
+        desired_capacity   = 1
+        max_size           = 3
+        min_size           = 1
+
+    }
+    shipping = {
+        instance_type = "t3.micro"
+        port = 80
+        desired_capacity   = 1
+        max_size           = 3
+        min_size           = 1
+
+    }
+    payment = {
+        instance_type = "t3.micro"
+        port = 80
+        desired_capacity   = 1
+        max_size           = 3
+        min_size           = 1
 
     }
 }

@@ -114,3 +114,30 @@ module "rabbitmq" {
 
 
 
+module "app" {
+    source = "git::https://github.com/roboshop-project-v1/tf-module-apps.git"
+    tags = var.tags
+    env = var.env
+    zone_id = var.zone_id
+    ssh_ingress_cidr = var.ssh_ingress_cidr
+
+    for_each = var.apps
+    component = each.key
+    subnet_ids = local.app_subnets
+    vpc_id = local.vpc_id
+    sg_ingress_cidr = local.app_subnets_cidr
+    
+    port = each.value["port"]
+    instance_type = each.value["instance_type"]
+    desired_capacity   = each.value["desired_capacity"]
+    max_size           = each.value["max_size"]
+    min_size           = each.value["min_size"]
+    
+
+    alb_name = lookup(lookup(module.alb,"private",null),"dns_name",null)
+   
+
+}
+
+
+
