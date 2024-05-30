@@ -4,16 +4,16 @@ output "subnets_root" {
 
 
 
-output "name2" {
-    value = module.vpc
+# output "name2" {
+#     value = module.vpc
   
-}
+# }
 
-output "alb" {
-  value = lookup(lookup(module.alb,"private",null),"dns_name",null)
-}
+# output "alb" {
+#   value = lookup(lookup(module.alb,"private",null),"dns_name",null)
+# }
 
-output "alb_module" {
-  value = module.alb
-}
+# output "alb_module" {
+#   value = module.alb
+# }
 
