@@ -23,7 +23,7 @@ default_vpc_cidr = "172.31.0.0/16"
 default_vpc_rt = "rtb-0a819725561398b7a"
 zone_id = "Z05459522TM73CF1WNKI7"
 
-ssh_ingress_cidr = ["172.31.0.0/16"]
+ssh_ingress_cidr = "172.31.0.0/16"
 tags = {
     company_name = "ABC Tech"
     bussiness_unit = "Ecommerce"
