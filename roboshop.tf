@@ -75,25 +75,25 @@ module "rds" {
 }
 
 
-# module "elasticache" {
-#     source = "git::https://github.com/roboshop-project-v1/tf-module-elasticache.git"
-#     tags = var.tags
-#     env = var.env
+module "elasticache" {
+    source = "git::https://github.com/roboshop-project-v1/tf-module-elasticache.git"
+    tags = var.tags
+    env = var.env
 
-#     for_each = var.rds
-#     subnet_ids = local.db_subnets    
-#     vpc_id = local.vpc_id
-#     sg_ingress_cidr = local.app_subnets_cidr
-#     elasticache_type = each.value["elasticache_type"]
-#     family =    each.value["family"]
-#     node_type            = each.value["node_type"]
-#     num_cache_nodes      = each.value["num_cache_nodes"]
-#     parameter_group_name = each.value["parameter_group_name"]
-#     engine_version       = each.value["engine_version"]
-#     port                 = each.value["port"]
+    for_each = var.rds
+    subnet_ids = local.db_subnets    
+    vpc_id = local.vpc_id
+    sg_ingress_cidr = local.app_subnets_cidr
+    elasticache_type = each.value["elasticache_type"]
+    family =    each.value["family"]
+    node_type            = each.value["node_type"]
+    num_cache_nodes      = each.value["num_cache_nodes"]
+    parameter_group_name = each.value["parameter_group_name"]
+    engine_version       = each.value["engine_version"]
+    port                 = each.value["port"]
 
 
-# }
+}
 
 
 
