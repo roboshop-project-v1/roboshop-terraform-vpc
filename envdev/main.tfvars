@@ -108,6 +108,7 @@ apps = {
         desired_capacity   = 1
         max_size           = 3
         min_size           = 1
+        priority           = 1
 
     }
     catalogue = {
@@ -116,6 +117,7 @@ apps = {
         desired_capacity   = 1
         max_size           = 3
         min_size           = 1
+        priority           = 2
 
     }
     cart = {
@@ -124,6 +126,7 @@ apps = {
         desired_capacity   = 1
         max_size           = 3
         min_size           = 1
+        priority           = 3
 
     }
     user = {
@@ -132,7 +135,7 @@ apps = {
         desired_capacity   = 1
         max_size           = 3
         min_size           = 1
-
+        priority           = 4
     }
     shipping = {
         instance_type = "t3.micro"
@@ -140,6 +143,7 @@ apps = {
         desired_capacity   = 1
         max_size           = 3
         min_size           = 1
+        priority           = 5
 
     }
     payment = {
@@ -148,6 +152,7 @@ apps = {
         desired_capacity   = 1
         max_size           = 3
         min_size           = 1
+        priority           = 6
 
     }
 }

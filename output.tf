@@ -12,3 +12,8 @@ output "name2" {
 output "alb" {
   value = lookup(lookup(module.alb,"private",null),"dns_name",null)
 }
+
+output "alb_module" {
+  value = module.alb
+}
+
