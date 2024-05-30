@@ -95,7 +95,7 @@ elasticache = {
 rabbitmq = {
     main = {
         instance_type = "t3.small"
-        ssh_ingress_cidr = ["172.31.0.0/16"]
+        ssh_ingress_cidr = "172.31.0.0/16"
         zone_id = "Z05459522TM73CF1WNKI7"
 
     }
