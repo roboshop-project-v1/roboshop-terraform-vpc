@@ -53,26 +53,26 @@ module "docdb" {
 
 
 
-# module "rds" {
-#     source = "git::https://github.com/roboshop-project-v1/tf-module-rds.git"
-#     tags = var.tags
-#     env = var.env
+module "rds" {
+    source = "git::https://github.com/roboshop-project-v1/tf-module-rds.git"
+    tags = var.tags
+    env = var.env
 
-#     for_each = var.rds
-#     subnet_ids = local.db_subnets    
-#     vpc_id = local.vpc_id
-#     sg_ingress_cidr = local.app_subnets_cidr
-#     from_port = each.value["from_port"]
-#     to_port = each.value["to_port"]
-#     engine_family = each.value["engine_family"]
-#     engine = each.value["engine"]
-#     engine_version = each.value["engine_version"]
-#     backup_retention_period = each.value["backup_retention_period"]
-#     preferred_backup_window = each.value["preferred_backup_window"]
-#     skip_final_snapshot = each.value["skip_final_snapshot"]
-#     instance_class = each.value["instance_class"]
-#     instance_count = each.value["instance_count"]
-# }
+    for_each = var.rds
+    subnet_ids = local.db_subnets    
+    vpc_id = local.vpc_id
+    sg_ingress_cidr = local.app_subnets_cidr
+    from_port = each.value["from_port"]
+    to_port = each.value["to_port"]
+    engine_family = each.value["engine_family"]
+    engine = each.value["engine"]
+    engine_version = each.value["engine_version"]
+    backup_retention_period = each.value["backup_retention_period"]
+    preferred_backup_window = each.value["preferred_backup_window"]
+    skip_final_snapshot = each.value["skip_final_snapshot"]
+    instance_class = each.value["instance_class"]
+    instance_count = each.value["instance_count"]
+}
 
 
 # module "elasticache" {
