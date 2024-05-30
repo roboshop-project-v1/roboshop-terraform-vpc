@@ -143,3 +143,7 @@ module "app" {
 
 
 
+output "alb_info1" {
+    value = lookup(module.alb,"private",null)
+  
+}
