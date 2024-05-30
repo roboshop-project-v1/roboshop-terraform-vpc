@@ -82,7 +82,7 @@ rds = {
 elasticache = {
     main = {
 
-        elasticache_type = "redis"
+        engine = "redis"
         family =    "redis6.x"
         node_type            = "cache.t3.micro"
         num_cache_nodes      = 1

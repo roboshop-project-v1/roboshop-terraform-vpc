@@ -79,12 +79,12 @@ module "elasticache" {
     source = "git::https://github.com/roboshop-project-v1/tf-module-elasticache.git"
     tags = var.tags
     env = var.env
-
-    for_each = var.elasticache
     subnet_ids = local.db_subnets    
     vpc_id = local.vpc_id
     sg_ingress_cidr = local.app_subnets_cidr
-    elasticache_type = each.value["elasticache_type"]
+
+    for_each = var.elasticache
+    engine = each.value["engine"]
     family =    each.value["family"]
     node_type            = each.value["node_type"]
     num_cache_nodes      = each.value["num_cache_nodes"]
