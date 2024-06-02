@@ -120,6 +120,7 @@ module "app" {
     env = var.env
     zone_id = var.zone_id
     ssh_ingress_cidr = var.ssh_ingress_cidr
+    default_vpc_id = var.default_vpc_id
 
     for_each = var.apps
     component = each.key
@@ -135,8 +136,11 @@ module "app" {
     priority           = each.value["priority"]
     
 
-    alb_name = lookup(lookup(lookup(module.alb,"private",null),"alb",null),"dns_name",null)
-    listener = lookup(lookup(lookup(module.alb,"private",null),"listener",null),"arn",null)
+    private_alb_name = lookup(lookup(lookup(module.alb,"private",null),"alb",null),"dns_name",null)
+    private_listener = lookup(lookup(lookup(module.alb,"private",null),"listener",null),"arn",null)
+
+    public_alb_name = lookup(lookup(lookup(module.alb,"public",null),"alb",null),"dns_name",null)
+    public_listener = lookup(lookup(lookup(module.alb,"public",null),"listener",null),"arn",null)
    
 
 }
