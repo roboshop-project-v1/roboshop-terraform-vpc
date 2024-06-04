@@ -109,6 +109,7 @@ apps = {
         max_size           = 3
         min_size           = 1
         priority           = 1
+        
 
     }
     catalogue = {
@@ -118,6 +119,7 @@ apps = {
         max_size           = 3
         min_size           = 1
         priority           = 2
+        parameters         = ["docdb"]
 
     }
     cart = {
@@ -136,6 +138,7 @@ apps = {
         max_size           = 3
         min_size           = 1
         priority           = 4
+        parameters         = ["docdb"]
     }
     shipping = {
         instance_type = "t3.micro"
