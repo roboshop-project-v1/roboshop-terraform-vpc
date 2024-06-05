@@ -109,6 +109,7 @@ apps = {
         max_size           = 3
         min_size           = 1
         priority           = 1
+        parameters         = []
         
 
     }
@@ -129,6 +130,7 @@ apps = {
         max_size           = 3
         min_size           = 1
         priority           = 3
+        parameters         = []
 
     }
     user = {
@@ -157,6 +159,7 @@ apps = {
         max_size           = 3
         min_size           = 1
         priority           = 6
+        parameters         = []
 
     }
 }
