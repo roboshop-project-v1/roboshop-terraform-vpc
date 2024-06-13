@@ -57,6 +57,7 @@ module "rds" {
     source = "git::https://github.com/roboshop-project-v1/tf-module-rds.git"
     tags = var.tags
     env = var.env
+    monitoring_ingress_cids = var.monitoring_ingress_cids
 
     for_each = var.rds
     subnet_ids = local.db_subnets    
