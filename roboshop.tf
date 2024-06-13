@@ -57,7 +57,6 @@ module "alb" {
 #     source = "git::https://github.com/roboshop-project-v1/tf-module-rds.git"
 #     tags = var.tags
 #     env = var.env
-#     monitoring_ingress_cids = var.monitoring_ingress_cids
 
 #     for_each = var.rds
 #     subnet_ids = local.db_subnets    
@@ -125,6 +124,7 @@ module "app" {
     zone_id = var.zone_id
     ssh_ingress_cidr = var.ssh_ingress_cidr
     default_vpc_id = var.default_vpc_id
+    monitoring_ingress_cids = var.monitoring_ingress_cids
 
     for_each = var.apps
     component = each.key
