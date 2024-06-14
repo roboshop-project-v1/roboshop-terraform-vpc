@@ -119,7 +119,7 @@ module "app" {
     #depends_on = [ module.alb,module.docdb,module.elasticache,module.rabbitmq,module.rds ]
 
     source = "git::https://github.com/roboshop-project-v1/tf-module-apps.git"
-    tags = var.tags
+    tags = merge(var.tags,each.value["tags"])
     env = var.env
     zone_id = var.zone_id
     ssh_ingress_cidr = var.ssh_ingress_cidr
